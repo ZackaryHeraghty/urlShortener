@@ -1,38 +1,54 @@
 <html>
+
 <head>
-    <link href="css/style.css" rel="stylesheet">
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <link href="css/style.css" rel="stylesheet" />
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
-  
-  <body>
-    <div id="app"></div>
-    <script type="text/jsx">
-      function Navbar(){
-        return(
-        <ul>
-          <li><a href="https://zheraghty.com/">zheraghty</a></li>
-          <li class="about"><a href="#about">About</a></li>
-        </ul>
-        );
+
+<body>
+  <div id="app"></div>
+  <script type="text/jsx">
+      function Navbar() {
+        return (
+      <ul>
+        <li><a href="https://zheraghty.com/">zheraghty</a></li>
+        <li class="about"><a href="#about">About</a></li>
+      </ul>
+      );
       }
 
       function Header() {
         return <div class="title">URL Shortener</div>;
       }
-       
+
+      function handleClick() {
+        console.log('increment like count');
+      }
+
+      function Urlbox(){
+          return (
+      <div class="urlBox">
+        <input type="text" class="urlInput" placeholder="Paste URL to shorten here"></input>
+        <button onClick={handleClick}>Like</button>
+      </div>
+      );
+      }
+
       function HomePage() {
         return (
-          <div>
-            <Navbar />
-            <Header />
-          </div>
-        );
+      <div>
+        <Navbar />
+        <Header />
+        <Urlbox />
+      </div>
+      );
       }
 
       const root = ReactDOM.createRoot(app);
       root.render(<HomePage />);
     </script>
-  </body>
+</body>
+
 </html>
