@@ -39,6 +39,26 @@ ul {
     align-items: center;
   }
 
-  .urlInput {
+  .urlInput{
+    display: table-cell;
+    width: 50%;
+    height: 56px;
+    padding: 10px 16px;
+    font: 17px lato,arial;
+    color: #000;
+    background: #fff;
+    border: 1px solid #bbb;
+    box-sizing: border-box;
+  }
 
+  .urlBut{
+    border-radius: 8px;
+    font-size: 30px;
+    background-color: rgba(49, 82, 153, 0.63);
+    width: 150px;
+    height: 56px;
+  }
+
+  .urlBut:hover {
+     background-color: rgb(123, 158, 233);
   }
